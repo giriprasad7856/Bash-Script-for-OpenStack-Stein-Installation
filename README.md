@@ -15,7 +15,7 @@ Bash Script for OpenStack Stein Installation
 
 #Conf directory contains the preconfigured config files of the services. If you change the values of the variable in the bash script you should reflect the changes in preconfigured files. 
 
-#admin-openrc and demo-openrc contains preconfigured credentials if there is any changes in credentials, these files should be updated 
+#admin-openrc and demo-openrc contains preconfigured credentials if there are any changes in credentials, these files should be updated 
 
 # Script Usage 
 bash Stein_Installation.sh
