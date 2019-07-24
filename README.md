@@ -2,7 +2,9 @@
 Mail : eranachandrane@gmail.com
 # Website : http://pyronoidninja.com/
 Date : 24-07-2019
+
 Description: This bash script will install the Stein of OpenStack with the keystone,glance,placement,nova,neutron and Horizon Services
+
 Script type - Ubuntu Shell Script
 
 
