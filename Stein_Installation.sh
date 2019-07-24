@@ -66,7 +66,7 @@ service mysql restart
 
 #####Delete anonymous users and  SET plugin = mysql_native_password starts######
 
-echo "UPDATE mysql.user SET Password=PASSWORD('my_new_password') WHERE User='root';" | mysql
+echo "UPDATE mysql.user SET Password=PASSWORD('$maria_db_root_password') WHERE User='root';" | mysql
 echo "DELETE FROM mysql.user WHERE User='';" | mysql
 echo "UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';" | mysql
 echo "FLUSH PRIVILEGES;" | mysql
@@ -441,7 +441,7 @@ service apache2 reload
 maria_db_user="root"
 
 #selecting new passsword for maria db root user
-maria_db_root_password="my_new_password"
+maria_db_root_password="pyronoidninja"
 
 maria_db_port="3306"
 maria_db_connect="mysql -h localhost -u$maria_db_user -p$maria_db_root_password --port=$maria_db_port"
@@ -492,17 +492,17 @@ network_interface=$(ip route get 8.8.8.8 | awk 'NR == 1 {print $5 ; exit }')
 
 #######OpenStack Stein Installation Starts  ##############
 
-#host_config
-#install_stein_packages
-#configuring_db
-#chrony
-#rabbitmq
-#memcached
-#keystone
-#glance
-#placement
-#nova
-#neutron
+host_config
+install_stein_packages
+configuring_db
+chrony
+rabbitmq
+memcached
+keystone
+glance
+placement
+nova
+neutron
 horizon
 
 #######OpenStack Stein Installation ends  ##############
